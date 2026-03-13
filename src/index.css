@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --color-bg: #FFFFFF;
+  --color-text: #0F172A;
+  --color-text-muted: #475569;
+  --color-text-subtle: #64748B;
+  --color-accent: #AD2BEE;
+  --color-accent-light: rgba(173, 43, 238, 0.1);
+  --color-border: #E2E8F0;
+  --color-border-light: #F1F5F9;
+  --color-surface: rgba(248, 250, 252, 0.5);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #FFFFFF;
+  color: #0F172A;
+}
+
+* {
+  box-sizing: border-box;
+}
