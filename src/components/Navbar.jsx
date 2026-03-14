@@ -1,6 +1,6 @@
 import styles from './Navbar.module.css';
 
-export default function Navbar() {
+export default function Navbar({ onSignUpClick }) {
   return (
     <nav className={styles.navbar}>
       <div className={styles.container}>
@@ -19,7 +19,16 @@ export default function Navbar() {
         </div>
         <div className={styles.actions}>
           <a href="#" className={styles.loginBtn}>Log In</a>
-          <a href="#" className={styles.signupBtn}>Sign Up</a>
+          <button 
+            onClick={(e) => {
+              e.preventDefault();
+              if (onSignUpClick) onSignUpClick();
+            }}
+            className={styles.signupBtn}
+            style={{ border: 'none', background: 'inherit', cursor: 'pointer', padding: 0 }}
+          >
+            Sign Up
+          </button>
         </div>
       </div>
     </nav>

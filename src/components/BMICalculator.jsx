@@ -2,12 +2,13 @@ import { useState, useEffect } from 'react';
 import styles from './BMICalculator.module.css';
 import { Zap, CheckCircle2, AlertCircle } from 'lucide-react';
 
-export default function BMICalculator() {
+export default function BMICalculator({ userData, onBackHome }) {
   const [childData, setChildData] = useState({
-    name: 'Leo',
-    age: 8,
-    height: 128,
-    weight: 32,
+    name: userData?.childName || 'Leo',
+    age: userData?.childAge || 8,
+    height: userData?.height || 128,
+    weight: userData?.weight || 32,
+    gender: userData?.gender || 'boy',
   });
 
   const [bmiData, setBmiData] = useState(null);
@@ -90,6 +91,19 @@ export default function BMICalculator() {
         {/* Header with navigation icons */}
         <div className={styles.header}>
           <div className={styles.headerLeft}>
+            {onBackHome && (
+              <button onClick={onBackHome} className={styles.backBtn}>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M15 18l-6-6 6-6"
+                    stroke="#0F172A"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
+            )}
             <div className={styles.logo}>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path

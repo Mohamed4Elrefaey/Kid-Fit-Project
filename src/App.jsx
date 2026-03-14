@@ -11,75 +11,40 @@ import BMICalculator from './components/BMICalculator';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
+  const [userData, setUserData] = useState(null);
+
+  const handleSignUpComplete = (data) => {
+    setUserData(data);
+    setCurrentPage('bmi');
+  };
+
+  const handleBackToHome = () => {
+    setCurrentPage('home');
+    setUserData(null);
+  };
 
   return (
     <div className="app">
       {currentPage === 'home' && (
         <>
-          <Navbar />
-          <Hero />
+          <Navbar onSignUpClick={() => setCurrentPage('signup')} />
+          <Hero onSignUpClick={() => setCurrentPage('signup')} />
           <Features />
           <Testimonial />
-          <CTA />
+          <CTA onSignUpClick={() => setCurrentPage('signup')} />
           <Footer />
         </>
       )}
       {currentPage === 'signup' && (
         <>
-          <Navbar />
-          <SignUp />
+          <Navbar onSignUpClick={() => setCurrentPage('signup')} />
+          <SignUp onSignUpComplete={handleSignUpComplete} />
           <Footer />
         </>
       )}
-      {currentPage === 'bmi' && <BMICalculator />}
-
-      {/* Navigation buttons for testing */}
-      <div style={{ position: 'fixed', bottom: 20, left: 20, zIndex: 1000 }}>
-        <button
-          onClick={() => setCurrentPage('home')}
-          style={{
-            padding: '8px 16px',
-            marginRight: '8px',
-            background: currentPage === 'home' ? '#AD2BEE' : '#E2E8F0',
-            color: currentPage === 'home' ? '#fff' : '#0F172A',
-            border: 'none',
-            borderRadius: '8px',
-            cursor: 'pointer',
-            fontSize: '12px',
-          }}
-        >
-          Home
-        </button>
-        <button
-          onClick={() => setCurrentPage('signup')}
-          style={{
-            padding: '8px 16px',
-            marginRight: '8px',
-            background: currentPage === 'signup' ? '#AD2BEE' : '#E2E8F0',
-            color: currentPage === 'signup' ? '#fff' : '#0F172A',
-            border: 'none',
-            borderRadius: '8px',
-            cursor: 'pointer',
-            fontSize: '12px',
-          }}
-        >
-          Sign Up
-        </button>
-        <button
-          onClick={() => setCurrentPage('bmi')}
-          style={{
-            padding: '8px 16px',
-            background: currentPage === 'bmi' ? '#AD2BEE' : '#E2E8F0',
-            color: currentPage === 'bmi' ? '#fff' : '#0F172A',
-            border: 'none',
-            borderRadius: '8px',
-            cursor: 'pointer',
-            fontSize: '12px',
-          }}
-        >
-          BMI
-        </button>
-      </div>
+      {currentPage === 'bmi' && userData && (
+        <BMICalculator userData={userData} onBackHome={handleBackToHome} />
+      )}
     </div>
   );
 }

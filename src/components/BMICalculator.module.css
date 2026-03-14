@@ -26,6 +26,23 @@
   gap: 16px;
 }
 
+.backBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.backBtn:hover {
+  background: #F1F5F9;
+}
+
 .logo {
   display: flex;
   align-items: center;

@@ -1,7 +1,7 @@
 import styles from './Hero.module.css';
 import { Play } from 'lucide-react';
 
-export default function Hero() {
+export default function Hero({ onSignUpClick }) {
   return (
     <section className={styles.hero}>
       <div className={styles.container}>
@@ -20,7 +20,10 @@ export default function Hero() {
             specifically for children.
           </p>
           <div className={styles.actions}>
-            <button className={styles.primaryBtn}>
+            <button 
+              className={styles.primaryBtn}
+              onClick={onSignUpClick}
+            >
               Start Your Child's Healthy Journey
             </button>
             <button className={styles.secondaryBtn}>

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import styles from './SignUp.module.css';
 import { Shield, User, AlertCircle } from 'lucide-react';
 
-export default function SignUp() {
+export default function SignUp({ onSignUpComplete }) {
   const [formData, setFormData] = useState({
     parentEmail: '',
     password: '',
@@ -81,20 +81,23 @@ export default function SignUp() {
     e.preventDefault();
     if (validateForm()) {
       setSubmitted(true);
-      console.log('Form submitted:', formData);
+      
+      // Prepare user data for BMI Calculator
+      const dataForBMI = {
+        parentEmail: formData.parentEmail,
+        childName: formData.childName,
+        childAge: parseInt(formData.childAge),
+        gender: formData.gender,
+        height: parseInt(formData.height),
+        weight: parseInt(formData.weight),
+      };
+
+      // Call the callback after a short delay to show the success state
       setTimeout(() => {
-        setSubmitted(false);
-        setFormData({
-          parentEmail: '',
-          password: '',
-          confirmPassword: '',
-          childName: '',
-          childAge: '',
-          gender: 'boy',
-          height: '',
-          weight: '',
-        });
-      }, 2000);
+        if (onSignUpComplete) {
+          onSignUpComplete(dataForBMI);
+        }
+      }, 500);
     }
   };
 
