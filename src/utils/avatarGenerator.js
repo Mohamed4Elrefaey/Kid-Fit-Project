@@ -1,61 +1,84 @@
-// Generate a static avatar URL for each user based on their name and gender
-export const generateAvatarUrl = (name, gender) => {
-  // Create a stable hash from the name
-  let hash = 0;
-  for (let i = 0; i < name.length; i++) {
-    const char = name.charCodeAt(i);
-    hash = ((hash << 5) - hash) + char;
-    hash = hash & hash;
-  }
+// Static boy avatar SVG
+const BOY_AVATAR = `<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <!-- Background -->
+  <circle cx="100" cy="100" r="100" fill="#E0F2FE"/>
+  
+  <!-- Head -->
+  <circle cx="100" cy="70" r="30" fill="#F4A460"/>
+  
+  <!-- Hair -->
+  <path d="M 70 45 Q 70 30 100 30 Q 130 30 130 45 Z" fill="#8B4513"/>
+  
+  <!-- Eyes -->
+  <circle cx="90" cy="65" r="4" fill="#000"/>
+  <circle cx="110" cy="65" r="4" fill="#000"/>
+  
+  <!-- Smile -->
+  <path d="M 90 78 Q 100 85 110 78" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round"/>
+  
+  <!-- Body -->
+  <rect x="80" y="105" width="40" height="50" rx="5" fill="#2563EB"/>
+  
+  <!-- Arms -->
+  <rect x="45" y="110" width="35" height="15" rx="7" fill="#F4A460"/>
+  <rect x="120" y="110" width="35" height="15" rx="7" fill="#F4A460"/>
+  
+  <!-- Legs -->
+  <rect x="85" y="160" width="12" height="35" fill="#333"/>
+  <rect x="103" y="160" width="12" height="35" fill="#333"/>
+  
+  <!-- Shoes -->
+  <rect x="83" y="192" width="16" height="8" rx="2" fill="#000"/>
+  <rect x="101" y="192" width="16" height="8" rx="2" fill="#000"/>
+</svg>`;
 
-  // Use absolute value and modulo to get a consistent number
-  const seed = Math.abs(hash) % 1000;
+// Static girl avatar SVG
+const GIRL_AVATAR = `<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <!-- Background -->
+  <circle cx="100" cy="100" r="100" fill="#FCE7F3"/>
+  
+  <!-- Head -->
+  <circle cx="100" cy="70" r="30" fill="#F4A460"/>
+  
+  <!-- Hair -->
+  <path d="M 70 50 Q 70 30 100 30 Q 130 30 130 50 L 130 75 Q 100 85 70 75 Z" fill="#D4A574"/>
+  
+  <!-- Hair ribbons -->
+  <circle cx="80" cy="45" r="6" fill="#EC4899"/>
+  <circle cx="120" cy="45" r="6" fill="#EC4899"/>
+  
+  <!-- Eyes -->
+  <circle cx="90" cy="65" r="4" fill="#000"/>
+  <circle cx="110" cy="65" r="4" fill="#000"/>
+  <circle cx="91" cy="64" r="1.5" fill="#FFF"/>
+  <circle cx="111" cy="64" r="1.5" fill="#FFF"/>
+  
+  <!-- Smile -->
+  <path d="M 90 78 Q 100 85 110 78" stroke="#000" stroke-width="2" fill="none" stroke-linecap="round"/>
+  
+  <!-- Dress body -->
+  <path d="M 80 105 L 70 160 Q 70 175 85 180 L 115 180 Q 130 175 130 160 L 120 105 Z" fill="#EC4899"/>
+  
+  <!-- Dress pattern -->
+  <circle cx="90" cy="125" r="3" fill="#FFF" opacity="0.6"/>
+  <circle cx="110" cy="125" r="3" fill="#FFF" opacity="0.6"/>
+  <circle cx="100" cy="140" r="3" fill="#FFF" opacity="0.6"/>
+  
+  <!-- Arms -->
+  <rect x="45" y="110" width="35" height="15" rx="7" fill="#F4A460"/>
+  <rect x="120" y="110" width="35" height="15" rx="7" fill="#F4A460"/>
+  
+  <!-- Legs -->
+  <rect x="85" y="175" width="10" height="25" fill="#F4A460"/>
+  <rect x="105" y="175" width="10" height="25" fill="#F4A460"/>
+  
+  <!-- Shoes -->
+  <rect x="83" y="198" width="14" height="7" rx="2" fill="#EC4899"/>
+  <rect x="103" y="198" width="14" height="7" rx="2" fill="#EC4899"/>
+</svg>`;
 
-  // Select avatar style based on gender
-  const style = gender === 'girl' ? 'avataaars-female' : 'avataaars';
-
-  // Return DiceBear avatar URL with seed for consistency
-  return `https://api.dicebear.com/7.x/${style}/svg?seed=${name}_${seed}&scale=80`;
-};
-
-// Alternative: Use a simple initials-based avatar generator
-export const generateInitialsAvatar = (name, gender) => {
-  const initials = name
-    .split(' ')
-    .map((word) => word[0])
-    .join('')
-    .toUpperCase()
-    .slice(0, 2);
-
-  // Color palette for avatars
-  const colors = [
-    '#AD2BEE', // Purple
-    '#3B82F6', // Blue
-    '#22C55E', // Green
-    '#F59E0B', // Amber
-    '#EC4899', // Pink
-    '#06B6D4', // Cyan
-  ];
-
-  // Generate consistent color based on name
-  let colorIndex = 0;
-  for (let i = 0; i < name.length; i++) {
-    colorIndex += name.charCodeAt(i);
-  }
-  const color = colors[colorIndex % colors.length];
-
-  // Create SVG data URL for initials avatar
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
-    <circle cx="100" cy="100" r="100" fill="${color}"/>
-    <text x="100" y="115" font-size="80" font-weight="bold" text-anchor="middle" fill="white" font-family="Arial, sans-serif">
-      ${initials}
-    </text>
-  </svg>`;
-
-  return `data:image/svg+xml;base64,${btoa(svg)}`;
-};
-
-// Use DiceBear API for better avatars
+// Get child avatar based on gender
 export const getChildAvatar = (name, gender) => {
-  return generateAvatarUrl(name, gender);
+  const avatarSvg = gender === 'girl' ? GIRL_AVATAR : BOY_AVATAR;
+  return `data:image/svg+xml;base64,${btoa(avatarSvg)}`;
 };
