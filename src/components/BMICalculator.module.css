@@ -1,0 +1,487 @@
+.bmiSection {
+  width: 100%;
+  background: #FFFFFF;
+  padding: 32px 80px;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.logoText {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #0F172A;
+}
+
+.headerActions {
+  display: flex;
+  gap: 12px;
+}
+
+.iconBtn {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  background: #FFFFFF;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.iconBtn:hover {
+  border-color: #CBD5E1;
+  background: #F8FAFC;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 40px;
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.childInfo {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.childAvatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.childDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.childName {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #0F172A;
+  margin: 0;
+}
+
+.childMeta {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #64748B;
+  margin: 0;
+}
+
+.statusSection {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 24px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.statusBar {
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    #AD2BEE 0%,
+    #AD2BEE 100%
+  );
+  border-radius: 999px;
+}
+
+.statusContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.statusLabel {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  color: #64748B;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.statusText {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  font-size: 56px;
+  line-height: 56px;
+  color: #0F172A;
+  margin: 0;
+  letter-spacing: -1.4px;
+}
+
+.statusDescription {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #64748B;
+  margin: 0;
+}
+
+.bmiCircleWrapper {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.bmiCircle {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.bmiScoreContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.bmiScore {
+  display: block;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 48px;
+  color: #0F172A;
+}
+
+.bmiLabel {
+  display: block;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #64748B;
+  margin-top: 4px;
+}
+
+.bmiRangeChart {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.rangeLabels {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.8px;
+  color: #64748B;
+  text-transform: uppercase;
+}
+
+.rangeBar {
+  display: flex;
+  gap: 0;
+  height: 24px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.rangeSegment {
+  flex: 1;
+  height: 100%;
+  transition: opacity 0.2s;
+}
+
+.rangeIndicator {
+  position: absolute;
+  bottom: -8px;
+  width: 8px;
+  height: 24px;
+  background: #0F172A;
+  border-radius: 4px;
+  transform: translateX(-50%);
+  transition: left 0.3s;
+}
+
+.rangeNotes {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  color: #94A3B8;
+  text-align: center;
+}
+
+.educationSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.educationCard {
+  padding: 24px;
+  background: #F8FAFC;
+  border: 1px solid #F1F5F9;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.educationIcon {
+  width: 40px;
+  height: 40px;
+  background: rgba(173, 43, 238, 0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.educationTitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #0F172A;
+  margin: 0;
+}
+
+.educationText {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #64748B;
+  margin: 0;
+}
+
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+}
+
+.nextStepsCard {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 24px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nextStepsHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nextStepsTitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #0F172A;
+  margin: 0;
+}
+
+.stepsList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.stepItem {
+  display: flex;
+  gap: 12px;
+}
+
+.stepIcon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stepContent {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stepTitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #0F172A;
+  margin: 0;
+}
+
+.stepDescription {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  color: #64748B;
+  margin: 0;
+}
+
+.startPlanBtn {
+  padding: 12px 16px;
+  background: #AD2BEE;
+  border: none;
+  border-radius: 9999px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.startPlanBtn:hover {
+  background: #9320d4;
+}
+
+.achievementCard {
+  background: linear-gradient(135deg, #AD2BEE 0%, #9320d4 100%);
+  border-radius: 24px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+
+.achievementText {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  margin: 0;
+}
+
+.achievementSubtext {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0;
+}
+
+.achievementImage {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 8px 0;
+}
+
+.achievementBadge {
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .rightColumn {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .bmiSection {
+    padding: 24px 16px;
+  }
+
+  .statusSection {
+    padding: 24px;
+  }
+
+  .childName {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .statusText {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .bmiScore {
+    font-size: 36px;
+  }
+
+  .educationSection {
+    grid-template-columns: 1fr;
+  }
+}
