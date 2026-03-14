@@ -2,7 +2,7 @@ import { useState } from 'react';
 import styles from './SignUp.module.css';
 import { Shield, User, AlertCircle } from 'lucide-react';
 
-export default function SignUp({ onSignUpComplete }) {
+export default function SignUp({ onSignUpComplete, onBackHome }) {
   const [formData, setFormData] = useState({
     parentEmail: '',
     password: '',
@@ -104,6 +104,19 @@ export default function SignUp({ onSignUpComplete }) {
   return (
     <section className={styles.signupSection}>
       <div className={styles.signupContainer}>
+        {onBackHome && (
+          <button onClick={onBackHome} className={styles.backBtn}>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M15 18l-6-6 6-6"
+                stroke="#0F172A"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
+        )}
         <div className={styles.header}>
           <h1 className={styles.title}>
             Join the Fun! <span className={styles.emoji}>🎈</span>

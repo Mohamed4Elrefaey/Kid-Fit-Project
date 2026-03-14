@@ -38,7 +38,7 @@ export default function App() {
       {currentPage === 'signup' && (
         <>
           <Navbar onSignUpClick={() => setCurrentPage('signup')} />
-          <SignUp onSignUpComplete={handleSignUpComplete} />
+          <SignUp onSignUpComplete={handleSignUpComplete} onBackHome={handleBackToHome} />
           <Footer />
         </>
       )}

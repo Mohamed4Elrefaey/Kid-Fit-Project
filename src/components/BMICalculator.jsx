@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import styles from './BMICalculator.module.css';
 import { Zap, CheckCircle2, AlertCircle } from 'lucide-react';
+import { getChildAvatar } from '../utils/avatarGenerator';
 
 export default function BMICalculator({ userData, onBackHome }) {
   const [childData, setChildData] = useState({
@@ -145,7 +146,7 @@ export default function BMICalculator({ userData, onBackHome }) {
             {/* Child Info */}
             <div className={styles.childInfo}>
               <img
-                src="https://cdn.codia.ai/figma/t7K2MhnyL2edQQmfjeDLrb/img-6c3cc22f7ba49bb8.png"
+                src={getChildAvatar(childData.name, childData.gender)}
                 alt={childData.name}
                 className={styles.childAvatar}
               />

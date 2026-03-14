@@ -96,4 +96,66 @@
 
 .signupBtn:hover {
   background: #9320d4;
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.navbar {
+  animation: slideDown 0.5s ease-out;
+}
+
+.logo {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.logoIcon {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.navLink {
+  position: relative;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #AD2BEE;
+  transition: width 0.3s ease;
+}
+
+.navLink:hover::after {
+  width: 100%;
 }

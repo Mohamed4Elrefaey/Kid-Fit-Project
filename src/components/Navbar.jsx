@@ -6,11 +6,16 @@ export default function Navbar({ onSignUpClick }) {
       <div className={styles.container}>
         <div className={styles.logo}>
           <div className={styles.logoIcon}>
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-              <circle cx="7" cy="7" r="5" fill="white" />
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+              {/* Child figure */}
+              <circle cx="16" cy="8" r="4" fill="#AD2BEE" />
+              <path d="M12 14 L20 14 L19 24 L13 24 Z" fill="#AD2BEE" />
+              <path d="M12 14 L8 22 M20 14 L24 22" stroke="#AD2BEE" strokeWidth="2" strokeLinecap="round" />
+              {/* Heart for health */}
+              <path d="M24 18 C24 16 22.5 15 21 15 C19.5 15 18 16 18 18 C18 16 16.5 15 15 15 C13.5 15 12 16 12 18" fill="none" stroke="#22C55E" strokeWidth="2" strokeLinecap="round" />
             </svg>
           </div>
-          <span className={styles.logoText}>Healthy Kids</span>
+          <span className={styles.logoText}>KidFit</span>
         </div>
         <div className={styles.nav}>
           <a href="#" className={styles.navLink}>Features</a>

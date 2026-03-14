@@ -13,11 +13,16 @@ export default function Footer() {
           <div className={styles.brand}>
             <div className={styles.logoRow}>
               <div className={styles.logoIcon}>
-                <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
-                  <circle cx="5.5" cy="5.5" r="4" fill="white" />
+                <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
+                  {/* Child figure */}
+                  <circle cx="16" cy="8" r="4" fill="white" />
+                  <path d="M12 14 L20 14 L19 24 L13 24 Z" fill="white" />
+                  <path d="M12 14 L8 22 M20 14 L24 22" stroke="white" strokeWidth="2" strokeLinecap="round" />
+                  {/* Heart for health */}
+                  <path d="M24 18 C24 16 22.5 15 21 15 C19.5 15 18 16 18 18 C18 16 16.5 15 15 15 C13.5 15 12 16 12 18" fill="none" stroke="#22C55E" strokeWidth="2" strokeLinecap="round" />
                 </svg>
               </div>
-              <span className={styles.logoText}>Healthy Kids</span>
+              <span className={styles.logoText}>KidFit</span>
             </div>
             <p className={styles.tagline}>
               Making health and wellness fun for children through technology and play. Helping families build lasting habits.

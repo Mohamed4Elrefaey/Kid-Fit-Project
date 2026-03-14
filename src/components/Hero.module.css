@@ -17,6 +17,38 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
+  animation: slideInLeft 0.8s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .badge {
@@ -27,6 +59,7 @@
   border-radius: 9999px;
   padding: 6px 16px;
   width: fit-content;
+  animation: fadeInUp 0.8s ease-out 0.2s backwards;
 }
 
 .badgeDot {
