@@ -12,6 +12,68 @@
   gap: 48px;
 }
 
+@media (max-width: 1024px) {
+  .hero {
+    padding: 64px 40px;
+  }
+
+  .heading {
+    font-size: 56px;
+    line-height: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .content {
+    align-items: center;
+  }
+
+  .badge {
+    margin: 0 auto;
+  }
+
+  .actions {
+    justify-content: center;
+  }
+
+  .imageWrapper {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 48px 24px;
+  }
+
+  .heading {
+    font-size: 40px;
+    line-height: 44px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .primaryBtn, .secondaryBtn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .dailyGoalCard {
+    left: 10px;
+    bottom: -10px;
+    padding: 16px;
+  }
+}
+
 .content {
   flex: 1;
   display: flex;
