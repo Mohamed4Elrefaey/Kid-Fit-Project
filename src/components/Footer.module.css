@@ -19,6 +19,40 @@
   align-items: flex-start;
 }
 
+@media (max-width: 1024px) {
+  .footer {
+    padding: 64px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .top {
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .brand {
+    width: 100%;
+  }
+
+  .links {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 48px 24px;
+  }
+
+  .links {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
 .brand {
   width: 244px;
   flex-shrink: 0;

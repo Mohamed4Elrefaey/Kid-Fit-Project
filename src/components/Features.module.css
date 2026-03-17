@@ -12,6 +12,44 @@
   gap: 64px;
 }
 
+@media (max-width: 1024px) {
+  .features {
+    padding: 64px 40px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    gap: 40px;
+  }
+
+  .heading {
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .features {
+    padding: 48px 24px;
+  }
+
+  .heading {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+
 .header {
   display: flex;
   flex-direction: column;
