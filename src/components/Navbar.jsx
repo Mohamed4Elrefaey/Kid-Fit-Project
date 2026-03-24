@@ -1,3 +1,5 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Navbar.module.css';
 
 export default function Navbar() {
@@ -19,7 +21,7 @@ export default function Navbar() {
         </div>
         <div className={styles.actions}>
           <a href="#" className={styles.loginBtn}>Log In</a>
-          <a href="#" className={styles.signupBtn}>Sign Up</a>
+          <Link to="/signup" className={styles.signupBtn}>Sign Up</Link>
         </div>
       </div>
     </nav>

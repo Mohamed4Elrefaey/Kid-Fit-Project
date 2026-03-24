@@ -97,3 +97,30 @@
 .signupBtn:hover {
   background: #9320d4;
 }
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .nav {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .logoText {
+    display: none;
+  }
+
+  .signupBtn {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+}
