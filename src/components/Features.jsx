@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from './Features.module.css';
 import { Activity, ClipboardList, Gamepad2, TrendingUp, Trophy, Bot } from 'lucide-react';
 
@@ -7,6 +8,7 @@ const features = [
     title: "BMI Health Check",
     description: "Easy, child-friendly tracking of growth and essential health metrics over time.",
     image: "https://cdn.codia.ai/figma/t7K2MhnyL2edQQmfjeDLrb/img-960311422bd2113e.png",
+    link: "/bmi"
   },
   {
     icon: <ClipboardList size={24} color="#AD2BEE" />,
@@ -42,7 +44,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section className={styles.features}>
+    <section className={styles.features} id="features">
       <div className={styles.container}>
         <div className={styles.header}>
           <h2 className={styles.heading}>Everything Your Child Needs to Thrive</h2>
@@ -58,7 +60,13 @@ export default function Features() {
                 {feature.icon}
               </div>
               <div className={styles.cardContent}>
-                <h3 className={styles.cardTitle}>{feature.title}</h3>
+                <h3 className={styles.cardTitle}>
+                  {feature.link ? (
+                    <Link to={feature.link} className={styles.featureLink}>{feature.title}</Link>
+                  ) : (
+                    feature.title
+                  )}
+                </h3>
                 <p className={styles.cardDescription}>{feature.description}</p>
               </div>
               <img

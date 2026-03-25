@@ -111,3 +111,50 @@
 .secondaryBtn:hover {
   background: rgba(255, 255, 255, 0.18);
 }
+
+@media (max-width: 1024px) {
+  .section {
+    padding: 60px 40px;
+  }
+
+  .container {
+    padding: 60px 40px;
+  }
+
+  .heading {
+    font-size: 48px;
+    line-height: 52px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 40px 20px;
+  }
+
+  .container {
+    padding: 60px 20px;
+    border-radius: 32px;
+  }
+
+  .heading {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .primaryBtn, .secondaryBtn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .heading {
+    font-size: 28px;
+    line-height: 32px;
+  }
+}
