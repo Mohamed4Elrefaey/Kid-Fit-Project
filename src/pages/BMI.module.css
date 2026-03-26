@@ -1,0 +1,141 @@
+.bmiContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 144px);
+  padding: 40px 20px;
+  background: var(--color-bg);
+}
+
+.bmiCard {
+  width: 100%;
+  max-width: 480px;
+  padding: 40px;
+  background: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+}
+
+.heading {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.subheading {
+  font-size: 15px;
+  color: var(--color-text-muted);
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.inputGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.input {
+  width: 100%;
+  padding: 12px 16px;
+  font-family: inherit;
+  font-size: 15px;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: var(--color-bg);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 4px var(--color-accent-light);
+}
+
+.calculateBtn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 8px;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  color: #FFFFFF;
+  background: var(--color-accent);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.calculateBtn:hover {
+  background: #9320d4;
+}
+
+.resultWrapper {
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+}
+
+.resultTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.bmiValue {
+  font-size: 42px;
+  font-weight: 800;
+  color: var(--color-accent);
+  margin-bottom: 8px;
+}
+
+.category {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text);
+  padding: 8px 20px;
+  border-radius: 9999px;
+  display: inline-block;
+  background: var(--color-accent-light);
+}
+
+@media (max-width: 480px) {
+  .bmiCard {
+    padding: 30px 20px;
+  }
+
+  .inputGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .heading {
+    font-size: 24px;
+  }
+}
