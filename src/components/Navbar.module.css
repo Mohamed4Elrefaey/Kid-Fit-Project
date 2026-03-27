@@ -4,7 +4,7 @@
   border-bottom: 1px solid #F1F5F9;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
 }
 
 .container {
@@ -15,6 +15,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
 .logo {
@@ -68,6 +69,10 @@
   gap: 12px;
 }
 
+.mobileActions {
+  display: none;
+}
+
 .loginBtn {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 600;
@@ -96,4 +101,65 @@
 
 .signupBtn:hover {
   background: #9320d4;
+}
+
+.menuToggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #0F172A;
+  cursor: pointer;
+  padding: 4px;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 24px;
+  }
+
+  .nav {
+    position: absolute;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    background: #FFFFFF;
+    flex-direction: column;
+    padding: 24px;
+    gap: 20px;
+    border-bottom: 1px solid #F1F5F9;
+    display: none;
+  }
+
+  .navOpen {
+    display: flex;
+  }
+
+  .actions {
+    display: none;
+  }
+
+  .mobileActions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  .mobileActions .loginBtn,
+  .mobileActions .signupBtn {
+    text-align: center;
+    width: 100%;
+  }
+
+  .menuToggle {
+    display: block;
+  }
 }
