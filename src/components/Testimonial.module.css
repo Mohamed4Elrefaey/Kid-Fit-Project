@@ -4,6 +4,18 @@
   background: rgba(173, 43, 238, 0.05);
 }
 
+@media (max-width: 1024px) {
+  .section {
+    padding: 80px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 20px;
+  }
+}
+
 .container {
   max-width: 1280px;
   margin: 0 auto;
@@ -28,6 +40,20 @@
   color: #1E293B;
   margin: 0;
   max-width: 800px;
+}
+
+@media (max-width: 768px) {
+  .quote {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .quote {
+    font-size: 20px;
+    line-height: 28px;
+  }
 }
 
 .author {

@@ -17,6 +17,18 @@
   justify-content: space-between;
 }
 
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
 .logo {
   display: flex;
   align-items: center;
@@ -49,6 +61,26 @@
   gap: 40px;
 }
 
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: #FFFFFF;
+    padding: 20px;
+    border-bottom: 1px solid #F1F5F9;
+    gap: 20px;
+    z-index: 1000;
+  }
+
+  .navOpen {
+    display: flex;
+  }
+}
+
 .navLink {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 500;
@@ -66,6 +98,34 @@
   display: flex;
   align-items: center;
   gap: 12px;
+}
+
+@media (max-width: 768px) {
+  .actions {
+    display: none;
+  }
+}
+
+.mobileActions {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobileActions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+    margin-top: 10px;
+    padding-top: 20px;
+    border-top: 1px solid #F1F5F9;
+  }
+
+  .mobileActions .loginBtn,
+  .mobileActions .signupBtn {
+    text-align: center;
+    width: 100%;
+  }
 }
 
 .loginBtn {
@@ -96,4 +156,19 @@
 
 .signupBtn:hover {
   background: #9320d4;
+}
+
+.menuToggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #0F172A;
+  padding: 8px;
+}
+
+@media (max-width: 768px) {
+  .menuToggle {
+    display: block;
+  }
 }

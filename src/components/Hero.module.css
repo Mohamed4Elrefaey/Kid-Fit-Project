@@ -4,6 +4,18 @@
   background: #FFFFFF;
 }
 
+@media (max-width: 1024px) {
+  .hero {
+    padding: 80px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 20px;
+  }
+}
+
 .container {
   max-width: 1280px;
   margin: 0 auto;
@@ -12,11 +24,25 @@
   gap: 48px;
 }
 
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 64px;
+  }
+}
+
 .content {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 32px;
+}
+
+@media (max-width: 1024px) {
+  .content {
+    align-items: center;
+  }
 }
 
 .badge {
@@ -55,6 +81,20 @@
   margin: 0;
 }
 
+@media (max-width: 768px) {
+  .heading {
+    font-size: 48px;
+    line-height: 54px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 36px;
+    line-height: 42px;
+  }
+}
+
 .headingAccent {
   color: #AD2BEE;
 }
@@ -73,6 +113,24 @@
   align-items: center;
   gap: 16px;
   flex-wrap: wrap;
+}
+
+@media (max-width: 1024px) {
+  .actions {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .primaryBtn, .secondaryBtn {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 .primaryBtn {
@@ -121,6 +179,13 @@
   max-width: 540px;
 }
 
+@media (max-width: 1024px) {
+  .imageWrapper {
+    max-width: 480px;
+    width: 100%;
+  }
+}
+
 .imageBg {
   position: absolute;
   width: 500px;
@@ -129,6 +194,13 @@
   background: rgba(173, 43, 238, 0.05);
   top: 0;
   left: 0;
+}
+
+@media (max-width: 480px) {
+  .imageBg {
+    width: 300px;
+    height: 300px;
+  }
 }
 
 .heroImage {
@@ -156,6 +228,17 @@
   align-items: center;
   gap: 16px;
   z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .dailyGoalCard {
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 16px;
+    width: fit-content;
+    white-space: nowrap;
+  }
 }
 
 .dailyGoalIcon {
