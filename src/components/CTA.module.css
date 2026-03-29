@@ -3,6 +3,18 @@
   padding: 80px;
 }
 
+@media (max-width: 1024px) {
+  .section {
+    padding: 60px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 40px 20px;
+  }
+}
+
 .container {
   max-width: 1120px;
   margin: 0 auto;
@@ -11,6 +23,20 @@
   padding: 80px;
   position: relative;
   overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 60px 32px;
+    border-radius: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 48px 20px;
+    border-radius: 24px;
+  }
 }
 
 .glowLeft {
@@ -56,6 +82,20 @@
   margin: 0;
 }
 
+@media (max-width: 768px) {
+  .heading {
+    font-size: 40px;
+    line-height: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
 .description {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 400;
@@ -72,6 +112,18 @@
   gap: 16px;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+@media (max-width: 480px) {
+  .actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .primaryBtn, .secondaryBtn {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .primaryBtn {

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from './Features.module.css';
 import { Activity, ClipboardList, Gamepad2, TrendingUp, Trophy, Bot } from 'lucide-react';
 
@@ -7,6 +8,7 @@ const features = [
     title: "BMI Health Check",
     description: "Easy, child-friendly tracking of growth and essential health metrics over time.",
     image: "https://cdn.codia.ai/figma/t7K2MhnyL2edQQmfjeDLrb/img-960311422bd2113e.png",
+    link: "/bmi",
   },
   {
     icon: <ClipboardList size={24} color="#AD2BEE" />,
@@ -52,22 +54,34 @@ export default function Features() {
           </p>
         </div>
         <div className={styles.grid}>
-          {features.map((feature, index) => (
-            <div key={index} className={styles.card}>
-              <div className={styles.iconWrapper}>
-                {feature.icon}
+          {features.map((feature, index) => {
+            const CardContent = (
+              <>
+                <div className={styles.iconWrapper}>
+                  {feature.icon}
+                </div>
+                <div className={styles.cardContent}>
+                  <h3 className={styles.cardTitle}>{feature.title}</h3>
+                  <p className={styles.cardDescription}>{feature.description}</p>
+                </div>
+                <img
+                  src={feature.image}
+                  alt={feature.title}
+                  className={styles.cardImage}
+                />
+              </>
+            );
+
+            return feature.link ? (
+              <Link key={index} to={feature.link} className={styles.card}>
+                {CardContent}
+              </Link>
+            ) : (
+              <div key={index} className={styles.card}>
+                {CardContent}
               </div>
-              <div className={styles.cardContent}>
-                <h3 className={styles.cardTitle}>{feature.title}</h3>
-                <p className={styles.cardDescription}>{feature.description}</p>
-              </div>
-              <img
-                src={feature.image}
-                alt={feature.title}
-                className={styles.cardImage}
-              />
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
