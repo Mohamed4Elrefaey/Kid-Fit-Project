@@ -97,3 +97,64 @@
 .signupBtn:hover {
   background: #9320d4;
 }
+
+.menuBtn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #0F172A;
+  padding: 4px;
+}
+
+.mobileActions {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    background: #FFFFFF;
+    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+    border-bottom: 1px solid #F1F5F9;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  .navOpen {
+    display: flex;
+  }
+
+  .actions {
+    display: none;
+  }
+
+  .menuBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobileActions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    padding-top: 12px;
+    border-top: 1px solid #F1F5F9;
+  }
+
+  .loginBtn, .signupBtn {
+    text-align: center;
+    width: 100%;
+  }
+}
