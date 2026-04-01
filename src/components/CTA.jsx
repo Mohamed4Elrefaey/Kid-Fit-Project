@@ -1,4 +1,5 @@
 import styles from './CTA.module.css';
+import { Link } from 'react-router-dom';
 
 export default function CTA() {
   return (
@@ -13,7 +14,7 @@ export default function CTA() {
             access to our first 3 activities immediately.
           </p>
           <div className={styles.actions}>
-            <button className={styles.primaryBtn}>Get Started for Free</button>
+            <Link to="/signup" className={styles.primaryBtn}>Get Started for Free</Link>
             <button className={styles.secondaryBtn}>View Pricing Plans</button>
           </div>
         </div>

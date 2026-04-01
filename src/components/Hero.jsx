@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from './Hero.module.css';
 import { Play } from 'lucide-react';
 
@@ -20,9 +21,9 @@ export default function Hero() {
             specifically for children.
           </p>
           <div className={styles.actions}>
-            <button className={styles.primaryBtn}>
+            <Link to="/signup" className={styles.primaryBtn}>
               Start Your Child's Healthy Journey
-            </button>
+            </Link>
             <button className={styles.secondaryBtn}>
               <Play size={18} fill="#0F172A" color="#0F172A" />
               See How It Works
