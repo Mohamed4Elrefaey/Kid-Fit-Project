@@ -129,3 +129,42 @@
   line-height: 20px;
   color: #94A3B8;
 }
+
+@media (max-width: 1024px) {
+  .footer {
+    padding: 64px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 48px 20px;
+  }
+
+  .top {
+    flex-direction: column;
+    gap: 48px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .brand {
+    width: 100%;
+    align-items: center;
+  }
+
+  .logoRow {
+    justify-content: center;
+  }
+
+  .links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .linkCol {
+    align-items: center;
+    min-width: 120px;
+  }
+}
