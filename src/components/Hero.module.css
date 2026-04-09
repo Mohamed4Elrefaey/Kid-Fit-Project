@@ -190,3 +190,65 @@
   line-height: 28px;
   color: #0F172A;
 }
+
+@media (max-width: 1024px) {
+  .hero {
+    padding: 80px 40px;
+  }
+
+  .heading {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 64px;
+  }
+
+  .content {
+    align-items: center;
+  }
+
+  .badge {
+    margin: 0 auto;
+  }
+
+  .actions {
+    justify-content: center;
+  }
+
+  .heroImage {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 64px 20px;
+  }
+
+  .heading {
+    font-size: 40px;
+    line-height: 44px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .primaryBtn, .secondaryBtn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .dailyGoalCard {
+    left: 10px;
+    right: 10px;
+    bottom: -20px;
+    padding: 16px;
+  }
+}
