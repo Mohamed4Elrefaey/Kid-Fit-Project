@@ -129,3 +129,40 @@
   line-height: 20px;
   color: #94A3B8;
 }
+
+@media (max-width: 1024px) {
+  .footer {
+    padding: 64px 40px 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .top {
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .brand {
+    max-width: 100%;
+  }
+
+  .links {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 48px 20px 24px;
+  }
+
+  .links {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .bottom {
+    text-align: center;
+  }
+}
