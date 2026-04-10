@@ -97,3 +97,39 @@
 .signupBtn:hover {
   background: #9320d4;
 }
+
+/* Tablet: 481px – 768px */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 40px;
+  }
+
+  .nav {
+    display: none; /* Hide nav links on tablet and below for simplicity or use a hamburger */
+  }
+}
+
+/* Mobile: 320px – 480px */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .logoText {
+    display: none; /* Hide text on very small screens if needed, or keep it */
+  }
+
+  .actions {
+    gap: 8px;
+  }
+
+  .signupBtn {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .loginBtn {
+    padding: 8px;
+    font-size: 12px;
+  }
+}
