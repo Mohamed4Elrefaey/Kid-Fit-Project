@@ -77,3 +77,34 @@
   line-height: 20px;
   color: #64748B;
 }
+
+/* Laptop: 769px – 1024px */
+@media (max-width: 1024px) {
+  .section {
+    padding: 80px 80px;
+  }
+}
+
+/* Tablet: 481px – 768px */
+@media (max-width: 768px) {
+  .section {
+    padding: 64px 40px;
+  }
+
+  .quote {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+/* Mobile: 320px – 480px */
+@media (max-width: 480px) {
+  .section {
+    padding: 48px 20px;
+  }
+
+  .quote {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
