@@ -68,6 +68,19 @@
   gap: 12px;
 }
 
+.mobileToggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #0F172A;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.mobileMenu {
+  display: none;
+}
+
 .loginBtn {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 600;
@@ -96,4 +109,63 @@
 
 .signupBtn:hover {
   background: #9320d4;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 24px;
+  }
+
+  .nav, .actions {
+    display: none;
+  }
+
+  .mobileToggle {
+    display: block;
+  }
+
+  .mobileMenu {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    background: #FFFFFF;
+    border-top: 1px solid #F1F5F9;
+    gap: 16px;
+  }
+
+  .mobileLink {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: #475569;
+    text-decoration: none;
+  }
+
+  .mobileActions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 8px;
+  }
+
+  .mobileLoginBtn {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #475569;
+    text-decoration: none;
+    padding: 12px 0;
+  }
+
+  .mobileSignupBtn {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+    background: #AD2BEE;
+    padding: 12px;
+    border-radius: 12px;
+    text-align: center;
+  }
 }
