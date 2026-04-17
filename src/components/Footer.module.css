@@ -129,3 +129,57 @@
   line-height: 20px;
   color: #94A3B8;
 }
+
+@media (max-width: 1024px) {
+  .footer {
+    padding: 64px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 48px 20px;
+  }
+
+  .top {
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .brand {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logoRow {
+    justify-content: center;
+  }
+
+  .links {
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px 24px;
+  }
+
+  .linkCol {
+    min-width: 120px;
+    flex: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .linkCol {
+    min-width: 100%;
+    align-items: center;
+  }
+
+  .linkList {
+    align-items: center;
+  }
+
+  .container {
+    gap: 48px;
+  }
+}
