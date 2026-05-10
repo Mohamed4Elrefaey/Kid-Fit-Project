@@ -97,3 +97,69 @@
 .signupBtn:hover {
   background: #9320d4;
 }
+
+.menuToggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #0F172A;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.mobileActions {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .nav {
+    position: absolute;
+    top: 72px;
+    left: 0;
+    width: 100%;
+    background: #FFFFFF;
+    flex-direction: column;
+    padding: 24px;
+    gap: 24px;
+    border-bottom: 1px solid #F1F5F9;
+    display: none;
+  }
+
+  .navOpen {
+    display: flex;
+  }
+
+  .actions {
+    display: none;
+  }
+
+  .menuToggle {
+    display: block;
+  }
+
+  .mobileActions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    margin-top: 8px;
+    padding-top: 24px;
+    border-top: 1px solid #F1F5F9;
+  }
+
+  .mobileActions .loginBtn,
+  .mobileActions .signupBtn {
+    text-align: center;
+    width: 100%;
+  }
+}
