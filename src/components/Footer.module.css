@@ -129,3 +129,51 @@
   line-height: 20px;
   color: #94A3B8;
 }
+
+@media (max-width: 1024px) {
+  .footer {
+    padding: 64px 40px;
+  }
+
+  .top {
+    flex-direction: column;
+    gap: 64px;
+  }
+
+  .brand {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .links {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 48px 24px;
+  }
+
+  .links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  .linkCol {
+    min-width: unset;
+  }
+}
+
+@media (max-width: 480px) {
+  .links {
+    grid-template-columns: 1fr;
+  }
+
+  .brand {
+    gap: 16px;
+  }
+}
