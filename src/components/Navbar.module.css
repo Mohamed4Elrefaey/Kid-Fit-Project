@@ -1,7 +1,7 @@
 .navbar {
   width: 100%;
-  background: #FFFFFF;
-  border-bottom: 1px solid #F1F5F9;
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border-light);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -27,7 +27,7 @@
 .logoIcon {
   width: 32px;
   height: 32px;
-  background: #AD2BEE;
+  background: var(--color-accent);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -40,7 +40,7 @@
   font-size: 18px;
   line-height: 28px;
   letter-spacing: -0.45px;
-  color: #0F172A;
+  color: var(--color-text);
 }
 
 .nav {
@@ -53,13 +53,13 @@
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 500;
   font-size: 15px;
-  color: #475569;
+  color: var(--color-text-muted);
   text-decoration: none;
   transition: color 0.2s;
 }
 
 .navLink:hover {
-  color: #0F172A;
+  color: var(--color-text);
 }
 
 .actions {
@@ -72,14 +72,14 @@
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 600;
   font-size: 14px;
-  color: #475569;
+  color: var(--color-text-muted);
   text-decoration: none;
   padding: 8px 16px;
   transition: color 0.2s;
 }
 
 .loginBtn:hover {
-  color: #0F172A;
+  color: var(--color-text);
 }
 
 .signupBtn {
@@ -88,12 +88,89 @@
   font-size: 14px;
   color: #FFFFFF;
   text-decoration: none;
-  background: #AD2BEE;
+  background: var(--color-accent);
   padding: 8px 20px;
   border-radius: 9999px;
   transition: background 0.2s;
 }
 
 .signupBtn:hover {
-  background: #9320d4;
+  opacity: 0.9;
+}
+
+.mobileToggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.mobileMenu {
+  display: none;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .actions {
+    display: none;
+  }
+
+  .mobileToggle {
+    display: block;
+  }
+
+  .mobileMenu {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: var(--color-bg);
+    border-top: 1px solid var(--color-border-light);
+    gap: 16px;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  .mobileNavLink {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--color-text-muted);
+    text-decoration: none;
+  }
+
+  .mobileActions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid var(--color-border-light);
+  }
+
+  .mobileActions .loginBtn {
+    text-align: center;
+    padding: 12px;
+  }
+
+  .mobileActions .signupBtn {
+    text-align: center;
+    padding: 12px;
+  }
 }

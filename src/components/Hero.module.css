@@ -1,7 +1,8 @@
 .hero {
   width: 100%;
   padding: 96px 80px;
-  background: #FFFFFF;
+  background: var(--color-bg);
+  overflow: hidden;
 }
 
 .container {
@@ -23,7 +24,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(173, 43, 238, 0.1);
+  background: var(--color-accent-light);
   border-radius: 9999px;
   padding: 6px 16px;
   width: fit-content;
@@ -32,7 +33,7 @@
 .badgeDot {
   width: 8px;
   height: 8px;
-  background: #AD2BEE;
+  background: var(--color-accent);
   border-radius: 50%;
   display: block;
 }
@@ -42,7 +43,7 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 20px;
-  color: #AD2BEE;
+  color: var(--color-accent);
 }
 
 .heading {
@@ -51,12 +52,12 @@
   font-size: 72px;
   line-height: 72px;
   letter-spacing: -1.8px;
-  color: #0F172A;
+  color: var(--color-text);
   margin: 0;
 }
 
 .headingAccent {
-  color: #AD2BEE;
+  color: var(--color-accent);
 }
 
 .description {
@@ -64,7 +65,7 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 29.25px;
-  color: #475569;
+  color: var(--color-text-muted);
   margin: 0;
 }
 
@@ -80,7 +81,7 @@
   font-weight: 800;
   font-size: 16px;
   color: #FFFFFF;
-  background: #AD2BEE;
+  background: var(--color-accent);
   border: none;
   border-radius: 9999px;
   padding: 16px 32px;
@@ -91,7 +92,7 @@
 }
 
 .primaryBtn:hover {
-  background: #9320d4;
+  opacity: 0.9;
   transform: translateY(-1px);
 }
 
@@ -99,9 +100,9 @@
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 700;
   font-size: 16px;
-  color: #0F172A;
+  color: var(--color-text);
   background: transparent;
-  border: 2px solid #E2E8F0;
+  border: 2px solid var(--color-border);
   border-radius: 9999px;
   padding: 14px 28px;
   cursor: pointer;
@@ -112,7 +113,7 @@
 }
 
 .secondaryBtn:hover {
-  border-color: #CBD5E1;
+  border-color: var(--color-text-subtle);
 }
 
 .imageWrapper {
@@ -126,7 +127,7 @@
   width: 500px;
   height: 500px;
   border-radius: 50%;
-  background: rgba(173, 43, 238, 0.05);
+  background: var(--color-accent-light);
   top: 0;
   left: 0;
 }
@@ -180,7 +181,7 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 20px;
-  color: #64748B;
+  color: var(--color-text-subtle);
 }
 
 .dailyGoalValue {
@@ -188,5 +189,77 @@
   font-weight: 800;
   font-size: 18px;
   line-height: 28px;
-  color: #0F172A;
+  color: var(--color-text);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 60px 40px;
+  }
+
+  .heading {
+    font-size: 56px;
+    line-height: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 60px;
+  }
+
+  .content {
+    align-items: center;
+  }
+
+  .hero {
+    padding: 40px 20px;
+  }
+
+  .heading {
+    font-size: 48px;
+    line-height: 52px;
+  }
+
+  .imageWrapper {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .imageBg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .dailyGoalCard {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -20px;
+    padding: 16px;
+    width: max-content;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .primaryBtn, .secondaryBtn {
+    width: 100%;
+    justify-content: center;
+  }
 }
