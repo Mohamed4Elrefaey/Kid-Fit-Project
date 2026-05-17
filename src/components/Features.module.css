@@ -99,3 +99,34 @@
   border-radius: 16px;
   display: block;
 }
+
+@media (max-width: 1024px) {
+  .features {
+    padding: 80px 40px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .heading {
+    font-size: 40px;
+    line-height: 44px;
+  }
+}
+
+@media (max-width: 768px) {
+  .features {
+    padding: 60px 20px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .heading {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
