@@ -77,3 +77,36 @@
   line-height: 20px;
   color: #64748B;
 }
+
+@media (max-width: 1024px) {
+  .section {
+    padding: 80px 80px;
+  }
+
+  .quote {
+    font-size: 26px;
+    line-height: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 40px;
+  }
+
+  .quote {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 48px 20px;
+  }
+
+  .quote {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
