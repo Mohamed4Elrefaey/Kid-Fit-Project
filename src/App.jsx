@@ -1,20 +1,17 @@
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Features from './components/Features';
-import Testimonial from './components/Testimonial';
-import CTA from './components/CTA';
-import Footer from './components/Footer';
+import Home from './pages/Home.jsx';
+import SignUp from './pages/SignUp.jsx';
+import BMI from './pages/BMI.jsx';
 
 export default function App() {
   return (
     <div className="app">
-      <Navbar />
-      <Hero />
-      <Features />
-      <Testimonial />
-      <CTA />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/bmi" element={<BMI />} />
+      </Routes>
     </div>
   );
 }
