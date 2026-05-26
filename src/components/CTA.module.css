@@ -111,3 +111,43 @@
 .secondaryBtn:hover {
   background: rgba(255, 255, 255, 0.18);
 }
+
+/* Breakpoints */
+@media (max-width: 1024px) {
+  .section {
+    padding: 64px 40px;
+  }
+
+  .container {
+    padding: 64px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .container {
+    padding: 48px 24px;
+    border-radius: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 48px 20px;
+  }
+
+  .heading {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .primaryBtn, .secondaryBtn {
+    width: 100%;
+    padding: 14px 24px;
+    font-size: 16px;
+  }
+}
