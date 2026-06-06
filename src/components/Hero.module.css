@@ -190,3 +190,45 @@
   line-height: 28px;
   color: #0F172A;
 }
+
+@media (max-width: 1024px) {
+  .hero {
+    padding: 64px 40px;
+  }
+
+  .heading {
+    font-size: 56px;
+    line-height: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 64px;
+  }
+
+  .content {
+    align-items: center;
+  }
+
+  .hero {
+    padding: 48px 24px;
+  }
+
+  .heading {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .imageWrapper {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .imageBg {
+    width: 360px;
+    height: 360px;
+  }
+}

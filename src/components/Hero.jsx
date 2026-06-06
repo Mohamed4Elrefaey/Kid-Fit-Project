@@ -3,7 +3,7 @@ import { Play } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className={styles.hero}>
+    <section className={styles.hero} id="about">
       <div className={styles.container}>
         <div className={styles.content}>
           <div className={styles.badge}>
