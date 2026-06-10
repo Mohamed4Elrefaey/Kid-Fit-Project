@@ -87,7 +87,7 @@
   cursor: pointer;
   box-shadow: 0px 8px 10px -6px rgba(173, 43, 238, 0.25), 0px 20px 25px -5px rgba(173, 43, 238, 0.25);
   transition: background 0.2s, transform 0.1s;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .primaryBtn:hover {
@@ -189,4 +189,64 @@
   font-size: 18px;
   line-height: 28px;
   color: #0F172A;
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    padding: 64px 40px;
+  }
+
+  .heading {
+    font-size: 56px;
+    line-height: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 48px 20px;
+  }
+
+  .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 64px;
+  }
+
+  .content {
+    align-items: center;
+  }
+
+  .heading {
+    font-size: 48px;
+    line-height: 52px;
+  }
+
+  .imageWrapper {
+    max-width: 100%;
+  }
+
+  .dailyGoalCard {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -20px;
+    width: max-content;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  .actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .primaryBtn, .secondaryBtn {
+    width: 100%;
+    justify-content: center;
+  }
 }
