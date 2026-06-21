@@ -129,3 +129,38 @@
   line-height: 20px;
   color: #94A3B8;
 }
+
+@media (max-width: 1024px) {
+  .footer {
+    padding: 64px 40px;
+  }
+
+  .top {
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .links {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 48px 20px;
+  }
+
+  .brand {
+    width: 100%;
+  }
+
+  .linkCol {
+    min-width: 120px;
+  }
+
+  .links {
+    gap: 24px;
+  }
+}
