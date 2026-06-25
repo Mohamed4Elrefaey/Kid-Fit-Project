@@ -1,7 +1,13 @@
+import { Link } from 'react-router-dom';
 import styles from './Footer.module.css';
 import { Twitter, Instagram, Facebook } from 'lucide-react';
 
-const resources = ["Our Blog", "Parent Guides", "Activity Library", "Nutrition Tips"];
+const resources = [
+  { name: "BMI Calculator", path: "/bmi" },
+  { name: "Parent Guides", path: "#" },
+  { name: "Activity Library", path: "#" },
+  { name: "Nutrition Tips", path: "#" }
+];
 const company = ["About Us", "Careers", "Press Kit", "Success Stories"];
 const legal = ["Privacy Policy", "Terms of Service", "Cookie Policy", "Contact Support"];
 
@@ -34,7 +40,13 @@ export default function Footer() {
               <h4 className={styles.colTitle}>Resources</h4>
               <ul className={styles.linkList}>
                 {resources.map((item) => (
-                  <li key={item}><a href="#" className={styles.linkItem}>{item}</a></li>
+                  <li key={item.name}>
+                    {item.path.startsWith('/') ? (
+                      <Link to={item.path} className={styles.linkItem}>{item.name}</Link>
+                    ) : (
+                      <a href={item.path} className={styles.linkItem}>{item.name}</a>
+                    )}
+                  </li>
                 ))}
               </ul>
             </div>

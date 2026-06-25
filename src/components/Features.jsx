@@ -42,7 +42,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section className={styles.features}>
+    <section className={styles.features} id="features">
       <div className={styles.container}>
         <div className={styles.header}>
           <h2 className={styles.heading}>Everything Your Child Needs to Thrive</h2>
