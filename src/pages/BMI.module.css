@@ -1,0 +1,252 @@
+.bmiSection {
+  min-height: calc(100vh - 72px);
+  padding: 96px 80px;
+  background: #FFFFFF;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.content {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.heading {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 48px;
+  letter-spacing: -1.2px;
+  color: #0F172A;
+  margin: 0;
+}
+
+.subheading {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #475569;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.card {
+  background: #FFFFFF;
+  border: 1px solid #F1F5F9;
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #0F172A;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 16px;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 15px;
+  color: #0F172A;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #AD2BEE;
+  background: #FFFFFF;
+}
+
+.calculateBtn {
+  width: 100%;
+  padding: 14px;
+  background: #AD2BEE;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 9999px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.calculateBtn:hover {
+  background: #9320d4;
+}
+
+.resultCard {
+  background: rgba(173, 43, 238, 0.03);
+  border: 2px dashed #E2E8F0;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.resultContent {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.resultLabel {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: #64748B;
+}
+
+.resultValue {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 1;
+  color: #AD2BEE;
+  margin: 0;
+}
+
+.categoryBadge {
+  padding: 6px 16px;
+  border-radius: 9999px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.underweight { background: #FEF3C7; color: #92400E; }
+.normal { background: #DCFCE7; color: #166534; }
+.overweight { background: #FFEDD5; color: #9A3412; }
+.obese { background: #FEE2E2; color: #991B1B; }
+
+.resultMessage {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  color: #64748B;
+  margin-top: 8px;
+}
+
+.placeholderContent {
+  text-align: center;
+  color: #94A3B8;
+}
+
+.placeholderIcon {
+  font-size: 48px;
+  margin-bottom: 12px;
+  opacity: 0.5;
+}
+
+.info {
+  background: #F8FAFC;
+  border-radius: 24px;
+  padding: 32px;
+}
+
+.infoHeading {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #0F172A;
+  margin: 0 0 24px 0;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.infoLabel {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #64748B;
+}
+
+.infoValue {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: #0F172A;
+}
+
+@media (max-width: 1024px) {
+  .bmiSection {
+    padding: 64px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .infoGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .heading {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bmiSection {
+    padding: 48px 20px;
+  }
+
+  .card, .resultCard {
+    padding: 24px;
+  }
+
+  .heading {
+    font-size: 32px;
+  }
+}
