@@ -2,6 +2,7 @@
   width: 100%;
   padding: 96px 80px;
   background: #FFFFFF;
+  overflow: hidden;
 }
 
 .container {
@@ -189,4 +190,70 @@
   font-size: 18px;
   line-height: 28px;
   color: #0F172A;
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    padding: 80px 40px;
+  }
+
+  .heading {
+    font-size: 56px;
+    line-height: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 64px;
+  }
+
+  .badge {
+    margin: 0 auto;
+  }
+
+  .actions {
+    justify-content: center;
+  }
+
+  .imageWrapper {
+    width: 100%;
+  }
+
+  .imageBg {
+    width: 300px;
+    height: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 64px 20px;
+  }
+
+  .heading {
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: -1px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .primaryBtn, .secondaryBtn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .dailyGoalCard {
+    left: 12px;
+    right: 12px;
+    bottom: -12px;
+    padding: 16px;
+  }
 }
